@@ -1,0 +1,20 @@
+2.1 Write a Python program using function concept that maps list of words into a list of integers
+representing the lengths of the corresponding words.
+
+Hint: If a list [ab,cde,erty] is passed on to the python function output should come as [2,3,4]
+
+Here 2,3 and 4 are the lengths of the words in the list.
+
+Solution:
+
+def words_to_length_map(words_list):
+    words_lengths = []
+    for i in range(len(words_list)):
+        words_lengths.append(len(words_list[i]))
+    return words_lengths
+    
+def main():
+    words_list = input("Enter words, separated by spaces: ").split()
+    print("List of words length of {} are {}.".format(words_list, ''.join(str(words_to_length_map(words_list)))))
+    
+main()

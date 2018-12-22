@@ -1,0 +1,12 @@
+1.2 Write a function filter_long_words() that takes a list of words and an integer n and returns
+the list of words that are longer than n.
+
+Solution:
+
+def filter_long_words(words_list, l):
+    return (word for word in words_list if len(word) >= l)
+
+def main():
+    words = input("Enter words, separated by spaces: ").split()
+    l = int(input("Minimum length of words to display: "))
+    print("Words longer than {} are {}.".format(l, ', '.join(filter_long_words(words, l))))
